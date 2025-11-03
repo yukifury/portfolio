@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import 'tailwindcss';
+@import './normalize.css';
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-ibm), sans-serif;
+}
+
+@theme {
+    --font-ibm: 'IBM Plex Mono', sans-serif;
+    --color-github: #241660;
+    --color-gmail: #EA4335;
+    --color-linkedin: #0A66C2;
+    --shadow-github: 0 0 20px 0 #4c3994;
+    --shadow-gmail: 0 0 20px 0 #EA4335;
+    --shadow-linkedin: 0 0 20px 0 #0A66C2;
+
+    --color-pinky: #892792;
+    --color-pinky-light: #BD3DC9;
+    --color-pinky-dark: #442547;
+    --shadow-pinky: 0 0 100px 0 #9725A2;
+
+    --color-greenish: #177F33;
+    --color-greenish-light: #4BAE37;
+    --color-greenish-dark: #184223;
+    --shadow-greenish: 0 0 100px 0 #4BAE37;
+
+    --color-blueish: #285796;
+    --color-blueish-light: #4589B3;
+    --color-blueish-dark: #213043;
+    --shadow-blueish: 0 0 100px 0 #4589B3;
+
+    --color-menu-yellow: #F1D42D;
+    --color-menu-green: #39F346;
+    --color-menu-red: #E62D2D;
+
+    --shadow-float-purple: 0 0 250px 0 rgba(189, 61, 201, 0.5);
+    --shadow-float-green: 0 0 250px 0 rgba(75, 174, 55, 0.5);
+}
+
+.intro-after-content::after {
+    content: '_' !important;
+    @apply font-black;
+}
