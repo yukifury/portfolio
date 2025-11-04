@@ -5,7 +5,7 @@ const AboutMeBlockFeature = () => {
     <FloatingBlock
       name={'about-me'}
       className={'shadow-float-purple bg-black p-10'}
-      containerClassName={'xxl:w-[52%] w-[59%] 2xl:h-9/10 h-full'}
+      containerClassName={'2xl:w-[52%] w-[59%] 2xl:h-9/10 h-full'}
       backgroundImg={'/imgs/about-me-bg.webp'}
     >
       <ul className={'text-white text-xl space-y-5 font-normal'}>
