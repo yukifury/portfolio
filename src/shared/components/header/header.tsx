@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({
           initial={false}
           animate={showOthers ? { opacity: 0.5 } : { opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className={cn('text-4xl !mb-3 text-white font-light')}
+          className={cn('2xl:text-4xl text-2xl !mb-3 text-white font-light')}
         >
           mamedov amir
         </motion.h1>

@@ -1,8 +1,11 @@
 import { motion } from 'motion/react';
 import MainLayout from './shared/layouts/main.tsx';
 import SectionProvider from './shared/providers/section/section.provider.tsx';
+import { isValidSection } from './shared/providers/section/sections.data.tsx';
 
 const App = () => {
+  const section = window.location.hash.substring(1);
+
   return (
     <>
       <motion.img
@@ -23,7 +26,9 @@ const App = () => {
       />
 
       <MainLayout>
-        <SectionProvider />
+        <SectionProvider
+          defaultSection={isValidSection(section) ? section : undefined}
+        />
       </MainLayout>
     </>
   );

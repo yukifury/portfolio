@@ -1,12 +1,18 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { SectionContext } from './section.context.ts';
 import type { BasicSection } from './section.types.ts';
-import { AllSections } from './sections.data.tsx';
+import { AllSections, type SectionKeys } from './sections.data.tsx';
 import { AnimatePresence } from 'motion/react';
 
-const SectionProvider = () => {
+export interface SectionProviderProps {
+  defaultSection?: SectionKeys;
+}
+
+const SectionProvider: React.FC<SectionProviderProps> = ({
+  defaultSection = 'main',
+}) => {
   const [currentSection, setCurrentSection] = useState<BasicSection>(
-    AllSections['main'],
+    AllSections[defaultSection],
   );
 
   return (

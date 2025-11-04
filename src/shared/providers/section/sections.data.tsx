@@ -3,7 +3,13 @@ import type { BasicSection } from './section.types.ts';
 import FloatingSection from '../../../sections/floating/floating.section.tsx';
 import WorkSection from '../../../sections/work/work.section.tsx';
 
-export const AllSections: Record<string, BasicSection> = {
+export type SectionKeys = 'main' | 're-main' | 'about-me' | 'skills' | 'work';
+
+export const isValidSection = (value: string): value is SectionKeys => {
+  return ['main', 're-main', 'about-me', 'skills', 'work'].includes(value);
+};
+
+export const AllSections: Record<SectionKeys, BasicSection> = {
   'main': {
     name: 'main',
     node: <MainMenuSection prerender />,

@@ -23,8 +23,8 @@ const FloatingBlock: React.FC<FloatingBlockProps> = ({
 
   const variants: Variants = {
     hidden: {
-      x: -1600,
-      y: -200,
+      x: -1000,
+      y: 0,
       opacity: 0,
     },
     visible: {
@@ -36,17 +36,17 @@ const FloatingBlock: React.FC<FloatingBlockProps> = ({
         damping: 1,
         mass: 0.1,
         stiffness: 4,
-        velocity: 5,
-        restSpeed: 2,
+        velocity: 20,
+        restSpeed: 4,
         restDelta: 0.2,
       },
     },
     exit: {
-      x: -1600,
-      y: 200,
+      x: 0,
+      y: 0,
       opacity: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.3,
         ease: 'easeInOut',
       },
     },
@@ -68,12 +68,12 @@ const FloatingBlock: React.FC<FloatingBlockProps> = ({
       >
         <motion.div
           className={cn(
-            'w-full h-full rounded-lg overflow-hidden relative',
+            'w-full h-full rounded-lg overflow-hidden overflow-y-auto relative',
             className,
           )}
           animate={{
-            x: [0, -3, 3, -3, 3, 0],
-            y: [0, 2, -2, 2, -2, 0],
+            x: [0, -2, 2, -2, 2, 0],
+            y: [0, 1, -1, 1, -1, 0],
           }}
           transition={{
             repeat: Infinity,
@@ -83,7 +83,7 @@ const FloatingBlock: React.FC<FloatingBlockProps> = ({
         >
           <div
             className={
-              'w-full flex justify-between items-start z-10 relative mb-10'
+              'w-full flex justify-between items-start z-10 relative xxl:mb-10 mb-4'
             }
           >
             <span className={'text-xl text-white opacity-50'}>{name}</span>

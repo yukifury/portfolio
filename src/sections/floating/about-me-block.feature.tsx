@@ -5,29 +5,22 @@ const AboutMeBlockFeature = () => {
     <FloatingBlock
       name={'about-me'}
       className={'shadow-float-purple bg-black p-10'}
-      containerClassName={'w-[52%] h-9/10'}
+      containerClassName={'xxl:w-[52%] w-[59%] 2xl:h-9/10 h-full'}
       backgroundImg={'/imgs/about-me-bg.webp'}
     >
       <ul className={'text-white text-xl space-y-5 font-normal'}>
-        <li className={'flex'}>
-          <span className={'text-[16px] text-white opacity-50 mr-2'}>1</span>
-          <p>
+        {[
+          <>
             Hi! I`m Amir —{' '}
             <span className={'text-pinky-light'}>frontend developer</span> based
             in Ireland, originally from Ukraine.
-          </p>
-        </li>
-        <li className={'flex'}>
-          <span className={'text-[16px] text-white opacity-50 mr-2'}>2</span>
-          <p>
+          </>,
+          <>
             1.5 years of{' '}
             <span className={'text-pinky-light'}>commercial experience</span> in
             UI development.
-          </p>
-        </li>
-        <li className={'flex'}>
-          <span className={'text-[16px] text-white opacity-50 mr-2'}>3</span>
-          <p>
+          </>,
+          <>
             Worked on <span className={'text-pinky-light'}>e-commerce</span>,{' '}
             <span className={'text-pinky-light'}>CMS</span>,{' '}
             <span className={'text-pinky-light'}>landing-pages</span>,{' '}
@@ -36,24 +29,27 @@ const AboutMeBlockFeature = () => {
               third-party services integrations
             </span>{' '}
             and many more
-          </p>
-        </li>
-        <li className={'flex'}>
-          <span className={'text-[16px] text-white opacity-50 mr-2'}>4</span>
-          <p>
+          </>,
+          <>
             Focused on <span className={'text-pinky-light'}>responsive</span>{' '}
             layouts, <span className={'text-pinky-light'}>clean code</span> and{' '}
-            <span className={'text-pinky-light'}>usability</span>.{' '}
-          </p>
-        </li>
-        <li className={'flex'}>
-          <span className={'text-[16px] text-white opacity-50 mr-2'}>5</span>
-          <p>
+            <span className={'text-pinky-light'}>usability</span>.
+          </>,
+          <>
             I care about <span className={'text-pinky-light'}>speed</span>,{' '}
             <span className={'text-pinky-light'}>architecture</span> and{' '}
             <span className={'text-pinky-light'}>bringing</span> design to life.
-          </p>
-        </li>
+          </>,
+        ].map((item, index) => (
+          <li className={'flex'}>
+            <span className={'text-[16px] text-white opacity-50 mr-2'}>
+              {index + 1}
+            </span>
+            <p>
+              <span className={'2xl:text-[20px] text-[16px]'}>{item}</span>
+            </p>
+          </li>
+        ))}
       </ul>
     </FloatingBlock>
   );

@@ -93,20 +93,22 @@ const SectionButton: React.FC<SectionButtonProps> = ({
   };
 
   return (
-    <Button
-      onClick={() => {
-        handleButtonClick(type);
-      }}
-      data-type={section.name}
-      data-active={section.name === type}
-      className={cn(
-        'transition duration-400 text-white !px-5 !py-3',
-        className,
-      )}
-    >
-      <div className={'flex items-center justify-center'}>
-        <span className={'text-xl font-normal'}>{type}</span>
-      </div>
-    </Button>
+    <a href={'#' + type}>
+      <Button
+        onClick={() => {
+          handleButtonClick(type);
+        }}
+        data-type={section.name}
+        data-active={section.name === type}
+        className={cn(
+          'transition duration-400 text-white !px-5 !py-3',
+          className,
+        )}
+      >
+        <div className={'flex items-center justify-center'}>
+          <span className={'text-xl font-normal'}>{type}</span>
+        </div>
+      </Button>
+    </a>
   );
 };

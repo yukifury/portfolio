@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 @import 'tailwindcss';
 @import './normalize.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
     scroll-behavior: smooth;
@@ -42,4 +45,8 @@ html {
 .intro-after-content::after {
     content: '_' !important;
     @apply font-black;
+}
+
+.scrollbar-disable::-webkit-scrollbar {
+    display: none;
 }

@@ -5,73 +5,35 @@ const SkillsBlockFeature = () => {
     <FloatingBlock
       name={'skills'}
       className={'shadow-float-green bg-black p-10'}
-      containerClassName={'w-[52%] h-9/10'}
+      containerClassName={'xxl:w-[52%] w-[59%] 2xl:h-9/10 h-full'}
       backgroundImg={'/imgs/skills-bg.webp'}
     >
-      <ul className={'text-white text-xl space-y-5 font-normal'}>
-        <li className={'flex'}>
-          <span className={'text-[16px] text-white opacity-50 mr-2'}>1</span>
-          <p>
-            <span className={'text-greenish-light'}>Languages: </span>{' '}
-            JavaScript, TypeScript
-          </p>
-        </li>
-        <li className={'flex'}>
-          <span className={'text-[16px] text-white opacity-50 mr-2'}>2</span>
-          <p>
-            <span className={'text-greenish-light'}>Frameworks: </span> React,
-            Next.js, Preact
-          </p>
-        </li>
-        <li className={'flex'}>
-          <span className={'text-[16px] text-white opacity-50 mr-2'}>3</span>
-          <p>
-            <span className={'text-greenish-light'}>UI-kits: </span>
-            Shadcn/ui, Radix UI
-          </p>
-        </li>
-        <li className={'flex'}>
-          <span className={'text-[16px] text-white opacity-50 mr-2'}>4</span>
-          <p>
-            <span className={'text-greenish-light'}>CSS: </span> Tailwind,
-            Bootstrap, PostCSS, SASS
-          </p>
-        </li>
-        <li className={'flex'}>
-          <span className={'text-[16px] text-white opacity-50 mr-2'}>5</span>
-          <p>
-            <span className={'text-greenish-light'}>Testing: </span> Vitest,
-            Jest, React Testing Library
-          </p>
-        </li>
-        <li className={'flex'}>
-          <span className={'text-[16px] text-white opacity-50 mr-2'}>6</span>
-          <p>
-            <span className={'text-greenish-light'}>Documentation: </span>{' '}
-            Storybook, Docusaurus
-          </p>
-        </li>
-        <li className={'flex'}>
-          <span className={'text-[16px] text-white opacity-50 mr-2'}>7</span>
-          <p>
-            <span className={'text-greenish-light'}>Tools: </span> Vite,
-            Webstorm, Postman
-          </p>
-        </li>
-        <li className={'flex'}>
-          <span className={'text-[16px] text-white opacity-50 mr-2'}>8</span>
-          <p>
-            <span className={'text-greenish-light'}>Core: </span> CSS3, HTML5,
-            GitHub, Figma, Photoshop
-          </p>
-        </li>
-        <li className={'flex'}>
-          <span className={'text-[16px] text-white opacity-50 mr-2'}>9</span>
-          <p>
-            <span className={'text-greenish-light'}>Other libraries: </span>{' '}
-            Redux, ESLint, Prettier, Tanstack Queries/Tables etc.
-          </p>
-        </li>
+      <ul className={'text-white text-xl xl:space-y-5 space-y-2 font-normal'}>
+        {[
+          { name: 'Languages', text: 'JavaScript, TypeScript' },
+          { name: 'Frameworks', text: 'React, Next.js, Preact' },
+          { name: 'UI-kits', text: 'Shadcn/ui, Radix UI' },
+          { name: 'CSS', text: 'Tailwind, Bootstrap, PostCSS, SASS' },
+          { name: 'Testing', text: 'Vitest, Jest, React Testing Library' },
+          { name: 'Documentation', text: 'Storybook, Docusaurus' },
+          { name: 'Tools', text: 'Webstorm, Postman' },
+          { name: 'Core', text: 'CSS3, HTML5, GitHub, Figma, Photoshop' },
+          { name: 'Other libraries', text: 'Redux, ESLint, Prettier' },
+        ].map((item, index) => (
+          <li className={'flex'}>
+            <span className={'text-[16px] text-white opacity-50 mr-2'}>
+              {index + 1}
+            </span>
+            <p>
+              <span
+                className={'text-greenish-light 2xl:text-[20px] text-[16px]'}
+              >
+                {item.name}:{' '}
+              </span>
+              <span className={'2xl:text-[20px] text-[16px]'}>{item.text}</span>
+            </p>
+          </li>
+        ))}
       </ul>
     </FloatingBlock>
   );

@@ -27,7 +27,7 @@ const TextTypingIntro: React.FC<TextTypingIntroProps> = ({
       <TypeAnimation
         preRenderFirstString={preRender}
         wrapper={'h2'}
-        className={'intro-after-content text-5xl font-medium'}
+        className={'intro-after-content 2xl:text-5xl text-4xl font-medium'}
         sequence={[
           'Frontend developer',
           () => {
