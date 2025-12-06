@@ -1,69 +1,45 @@
-# React + TypeScript + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio application built using a modern frontend stack and a custom architectural pattern focused on modularity, maintainability, and predictable UI behavior.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![React](https://img.shields.io/badge/React-19.1.1-blue?style=flat-square&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue?style=flat-square&logo=typescript)
+![Tailwind](https://img.shields.io/badge/Tailwind-4.1.13-blue?style=flat-square&logo=tailwind-css)
 
-## Expanding the ESLint configuration
+The application is built using modern web technologies:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend:** React 19.1.1 with TypeScript 5.8.3
+- **Styling:** Tailwind CSS 4.1.13
+- **Animations:** Motion 12.23.12
+- **Build Tool:** Vite 7.1.2
+- **Quality Assurance:** ESLint 9.33.0, Prettier 3.6.2
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Responsive design with dynamic breakpoint management
+- Smooth animations and transitions
+- Interactive project showcase
+- Skills presentation with categorized abilities
+- Modern floating UI components
+- Mobile-optimized interface
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+## Project Structure
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- *src/sections* — high-level interface modules (page sections, feature blocks)
+- *src/assets* — static assets and global styling resources
+- *src/shared* — cross-module utilities, abstractions, and shared logic
+- *src/shared/components* — specialized UI components bound to specific sections
+- *src/shared/ui* — UI primitives usable across the entire project
+- *src/shared/lib* — lightweight TypeScript classes encapsulating logic and reducing code duplication (only classNames now)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+## Commands
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+- ```npm run dev``` - starts the application in development mode with HMR enabled
+- ```npm run build``` - compiles the application for production
+- ```npm run preview``` - launches a local preview server for the previously built production bundle
+- ```npm run lint``` - runs static code analysis using ESLint
+- ```npm run lint:fix``` - automatically fixes ESLint-detected issues
+- ```npm run prettier``` - checks code formatting using Prettier
+- ```npm run prettier:fix``` - automatically formats code according to Prettier rules
