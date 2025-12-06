@@ -20,7 +20,7 @@ const WorkSection = () => {
         <ExperienceBlock />
       </div>
 
-      <div className={'2xl:w-4/7'}>
+      <div className={'2xl:w-4/7 w-4/7'}>
         <ProjectsBlock />
       </div>
     </div>

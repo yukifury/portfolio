@@ -17,7 +17,7 @@ const ExperienceBlock = () => {
       company: 'Proova',
       position: 'Frontend developer',
       description:
-        'CMS using React, TypeScript and TailAdmin (+Tailwind). Focused on architecture and speed.',
+        'CMS using React, TypeScript and TailAdmin (+Tailwind). Next.JS for landing pages. Focused on architecture and speed.',
     },
     {
       startYear: 2024,
@@ -64,9 +64,13 @@ const ExperienceBlock = () => {
       animate="visible"
       exit="exit"
       variants={{ ...variants }}
-      className={'space-y-10'}
+      className={'md:space-y-10 space-y-5'}
     >
-      <h3 className={'opacity-50 text-white 2xl:text-4xl text-2xl'}>
+      <h3
+        className={
+          'opacity-50 text-white 2xl:text-4xl lg:text-2xl md:text-[36px] text-xl'
+        }
+      >
         professional-experience:
       </h3>
 
@@ -75,23 +79,42 @@ const ExperienceBlock = () => {
 
         <ul
           className={
-            'flex flex-col gap-10 pl-5 overflow-y-auto scrollbar-disable 2xl:max-h-[400px] max-h-[300px]'
+            'flex flex-col gap-10 lg:pl-5 md:pl-4 pl-3 overflow-y-auto scrollbar-disable 2xl:max-h-[400px] lg:max-h-[300px] max-h-auto'
           }
         >
           {experience.map((item, index) => (
-            <li className={'flex flex-col gap-4 max-w-120'} key={index}>
-              <span className={'text-white 2xl:text-md text-sm'}>
+            <li
+              className={'flex flex-col lg:gap-4 md:gap-3 gap-2 max-w-120'}
+              key={index}
+            >
+              <span
+                className={
+                  'text-white 2xl:text-md lg:text-sm md:text-md text-xs'
+                }
+              >
                 {item.startYear}-{item.endYear}
               </span>
               <div className={'flex flex-col gap-1'}>
-                <span className={'text-white 2xl:text-xl text-lg'}>
+                <span
+                  className={
+                    'text-white 2xl:text-xl lg:text-lg md:text-xl text-sm'
+                  }
+                >
                   {item.position}
                 </span>
-                <span className={'text-white 2xl:text-xl text-lg'}>
+                <span
+                  className={
+                    'text-white 2xl:text-xl lg:text-lg md:text-xl text-sm'
+                  }
+                >
                   {item.company}
                 </span>
               </div>
-              <p className={'text-white 2xl:text-md text-sm opacity-50'}>
+              <p
+                className={
+                  'text-white 2xl:text-md lg:text-sm md:text-md text-xs opacity-50'
+                }
+              >
                 {item.description}
               </p>
             </li>

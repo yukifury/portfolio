@@ -2,9 +2,14 @@ import { motion } from 'motion/react';
 import MainLayout from './shared/layouts/main.tsx';
 import SectionProvider from './shared/providers/section/section.provider.tsx';
 import { isValidSection } from './shared/providers/section/sections.data.tsx';
+import { useBreakpoints } from './shared/providers/breakpoints/breakpoints.context.tsx';
 
 const App = () => {
-  const section = window.location.hash.substring(1);
+  const { breakpoints } = useBreakpoints();
+
+  const section = breakpoints.down('lg')
+    ? 'mobile'
+    : window.location.hash.substring(1);
 
   return (
     <>
@@ -24,7 +29,6 @@ const App = () => {
         src="/imgs/noise.webp"
         alt="noise background"
       />
-
       <MainLayout>
         <SectionProvider
           defaultSection={isValidSection(section) ? section : undefined}

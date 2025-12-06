@@ -43,18 +43,21 @@ const Header: React.FC<HeaderProps> = ({
           initial={false}
           animate={showOthers ? { opacity: 0.5 } : { opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className={cn('2xl:text-4xl text-2xl !mb-3 text-white font-light')}
+          className={cn(
+            '2xl:text-4xl lg:text-2xl md:text-3xl text-xl md:!mb-3 !mb-0 text-white font-light',
+          )}
         >
           mamedov amir
         </motion.h1>
 
         <TextTypingIntro
           preRender={!animate}
-          className={'mb-5'}
+          className={'md:mb-5 mb-3'}
           onAnimationEnd={handleAnimationEnd}
         />
 
         <motion.div
+          className={'md:w-auto w-full'}
           layoutId={'contact-buttons'}
           initial={false}
           animate={showOthers ? { opacity: 1 } : { opacity: 0 }}

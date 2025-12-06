@@ -39,6 +39,7 @@ html {
     --color-menu-red: #E62D2D;
 
     --shadow-float-purple: 0 0 250px 0 rgba(189, 61, 201, 0.5);
+    --shadow-float-blueish: 0 0 250px 0 rgba(69, 137, 179, 0.8);
     --shadow-float-green: 0 0 250px 0 rgba(75, 174, 55, 0.5);
 }
 

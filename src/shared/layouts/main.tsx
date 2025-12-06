@@ -1,17 +1,14 @@
 import React, { type PropsWithChildren } from 'react';
-import BreakpointsProvider from '../providers/breakpoints/breakpoints.provider';
 
 const MainLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
-    <BreakpointsProvider>
-      <div
-        className={
-          'h-full w-full 2xl:px-[100px] 2xl:py-[85px] px-[60px] py-[42px]'
-        }
-      >
-        {children}
-      </div>
-    </BreakpointsProvider>
+    <div
+      className={
+        'h-full w-full 2xl:px-[100px] 2xl:py-[85px] lg:px-[60px] lg:py-[42px] md:p-[40px] px-4 py-8'
+      }
+    >
+      {children}
+    </div>
   );
 };
 

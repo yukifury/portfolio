@@ -41,7 +41,7 @@ const AboutMeBlockFeature = () => {
             <span className={'text-pinky-light'}>bringing</span> design to life.
           </>,
         ].map((item, index) => (
-          <li className={'flex'}>
+          <li className={'flex'} key={`about-me-list-item-${index}`}>
             <span className={'text-[16px] text-white opacity-50 mr-2'}>
               {index + 1}
             </span>

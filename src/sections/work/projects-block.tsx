@@ -1,11 +1,20 @@
 import { motion } from 'motion/react';
 import type { Variants } from 'motion';
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import ProjectCard from '../../shared/components/project-card/project-card.tsx';
 import { Projects } from './projects.data.ts';
 import { cn } from '../../shared/lib/classnames.utils.ts';
+import Button from '../../shared/ui/button/button.tsx';
+import { useBreakpoints } from '../../shared/providers/breakpoints/breakpoints.context.tsx';
 
-const ProjectsBlock = () => {
+export interface ProjectsBlockProps {
+  maxItems?: number;
+}
+
+const ProjectsBlock: React.FC<ProjectsBlockProps> = ({ maxItems }) => {
+  const [showAmount, setShowAmount] = useState<number>(maxItems ?? Infinity);
+  const { breakpoints } = useBreakpoints();
+
   const variants: Variants = {
     hidden: {
       opacity: 0,
@@ -40,6 +49,20 @@ const ProjectsBlock = () => {
     return cards;
   }, []);
 
+  const handleMoreProjectsClick = () => {
+    setShowAmount(Infinity);
+  };
+
+  const getCardSizing = (index: number) => {
+    if (breakpoints.down('lg')) {
+      return 'w-full';
+    }
+
+    if (index !== 0 && getSector(index) === 1) return 'col-span-2';
+
+    return 'col-span-3';
+  };
+
   return (
     <motion.div
       initial="hidden"
@@ -48,27 +71,47 @@ const ProjectsBlock = () => {
       variants={{ ...variants }}
       className={'space-y-10 h-full'}
     >
-      <h3 className={'opacity-50 text-white 2xl:text-4xl text-2xl'}>
+      <h3
+        className={
+          'opacity-50 text-white 2xl:text-4xl text-2xl lg:block hidden'
+        }
+      >
         projects:
       </h3>
 
       <div
         className={'h-full 2xl:max-h-[93%] overflow-y-auto scrollbar-disable'}
       >
-        <div className={'grid grid-cols-5 gap-10 h-full'}>
-          {data.map((item, index) => (
+        <div
+          className={
+            'grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 lg:gap-10 gap-8 h-full'
+          }
+        >
+          {data.slice(0, showAmount).map((item, index) => (
             <div
+              key={`project-block-${index}`}
               className={cn(
-                'h-[300px]',
-                index !== 0 && getSector(index) === 1
-                  ? 'col-span-2'
-                  : 'col-span-3',
+                '2xl:h-[300px] lg:h-[200px] h-[256px]',
+                getCardSizing(index),
               )}
             >
               {item}
             </div>
           ))}
         </div>
+
+        {maxItems && Projects.length > maxItems && showAmount !== Infinity && (
+          <div className={'w-full flex justify-center items-center mt-8'}>
+            <Button
+              onClick={handleMoreProjectsClick}
+              className={
+                'bg-blueish !py-[14px] !px-15 !text-xl active:bg-blueish-light'
+              }
+            >
+              more projects
+            </Button>
+          </div>
+        )}
       </div>
     </motion.div>
   );

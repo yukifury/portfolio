@@ -1,6 +1,21 @@
 import FloatingBlock from '../../shared/components/floating-block/floating-block.tsx';
 
 const SkillsBlockFeature = () => {
+  const data = [
+    { name: 'Languages', text: 'JavaScript, TypeScript' },
+    { name: 'Frameworks', text: 'React, Next.js, Preact' },
+    { name: 'UI-kits', text: 'Shadcn/ui, Radix UI' },
+    { name: 'CSS', text: 'Tailwind, Bootstrap, PostCSS, SASS' },
+    { name: 'Testing', text: 'Vitest, Jest, React Testing Library' },
+    { name: 'Documentation', text: 'Storybook, Docusaurus' },
+    { name: 'Tools', text: 'Webstorm, Postman, Figma, Photoshop' },
+    { name: 'Core', text: 'CSS3, HTML5, GitHub' },
+    {
+      name: 'Other libraries',
+      text: 'Redux, Zustand, ESLint, Prettier, Tanstack Queries/Tables etc.',
+    },
+  ];
+
   return (
     <FloatingBlock
       name={'skills'}
@@ -9,18 +24,8 @@ const SkillsBlockFeature = () => {
       backgroundImg={'/imgs/skills-bg.webp'}
     >
       <ul className={'text-white text-xl xl:space-y-5 space-y-2 font-normal'}>
-        {[
-          { name: 'Languages', text: 'JavaScript, TypeScript' },
-          { name: 'Frameworks', text: 'React, Next.js, Preact' },
-          { name: 'UI-kits', text: 'Shadcn/ui, Radix UI' },
-          { name: 'CSS', text: 'Tailwind, Bootstrap, PostCSS, SASS' },
-          { name: 'Testing', text: 'Vitest, Jest, React Testing Library' },
-          { name: 'Documentation', text: 'Storybook, Docusaurus' },
-          { name: 'Tools', text: 'Webstorm, Postman' },
-          { name: 'Core', text: 'CSS3, HTML5, GitHub, Figma, Photoshop' },
-          { name: 'Other libraries', text: 'Redux, ESLint, Prettier' },
-        ].map((item, index) => (
-          <li className={'flex'}>
+        {data.map((item, index) => (
+          <li className={'flex'} key={`skills-list-item-${index}`}>
             <span className={'text-[16px] text-white opacity-50 mr-2'}>
               {index + 1}
             </span>

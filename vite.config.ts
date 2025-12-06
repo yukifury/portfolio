@@ -13,6 +13,6 @@ export default defineConfig({
   },
   plugins: [react(), tailwindcss()],
   server: {
-    allowedHosts: ['yukifury.ngrok.dev', '04d2d975f1e5.ngrok-free.app'],
+    allowedHosts: ['yukifury.ngrok.dev', '0ab4172df512.ngrok-free.app'],
   },
 });

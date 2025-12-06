@@ -6,6 +6,7 @@ interface BreakpointContextInterface {
     up: (bp: keyof Breakpoints) => boolean;
     down: (bp: keyof Breakpoints) => boolean;
   };
+  width: number;
 }
 
 export const BreakpointContext = createContext(

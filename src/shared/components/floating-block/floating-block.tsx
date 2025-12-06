@@ -91,11 +91,12 @@ const FloatingBlock: React.FC<FloatingBlockProps> = ({
             <div className={'flex gap-2 *:cursor-pointer'}>
               {['bg-menu-yellow', 'bg-menu-green', 'bg-menu-red'].map(
                 (item) => (
-                  <div
-                    key={item}
-                    onClick={handleHeaderButtonClick}
-                    className={'rounded-full h-5 w-5' + ' ' + item}
-                  ></div>
+                  <a key={item} href={'#'}>
+                    <div
+                      onClick={handleHeaderButtonClick}
+                      className={'rounded-full h-5 w-5' + ' ' + item}
+                    ></div>
+                  </a>
                 ),
               )}
             </div>

@@ -43,7 +43,7 @@ export const ContactButtons: React.FC<ContactButtonsProps> = ({
   return (
     <motion.div
       className={cn(
-        'relative',
+        'relative md:w-auto w-full',
         selfAlignment === 'center' && 'self-center',
         selfAlignment === 'right' && 'self-end',
         selfAlignment === 'left' && 'self-start',
@@ -68,14 +68,18 @@ const ContactButton: React.FC<ContactButtonProps> = ({
     <Button
       redirectSrc={urlSrc}
       className={cn(
-        'transition duration-400',
+        'transition duration-400 md:!w-auto !w-full lg:!h-auto !h-[50px]',
         alt === 'github' && 'hover:shadow-github',
         alt === 'linkedin' && 'hover:shadow-linkedin',
         alt === 'gmail' && 'hover:shadow-gmail',
       )}
       style={{ backgroundColor: `${color}` }}
     >
-      <div className={'h-6 w-6 flex items-center justify-center'}>
+      <div
+        className={
+          'lg:h-6 lg:w-6 w-full h-full flex items-center justify-center'
+        }
+      >
         <img src={logoSrc} alt={alt} />
       </div>
     </Button>
