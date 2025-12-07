@@ -48,6 +48,8 @@ const ModalProvider: React.FC<AlertProviderProps> = ({ children }) => {
       <AnimatePresence>
         {isShow && modal && (
           <motion.div
+            role="dialog"
+            aria-modal="true"
             initial="hidden"
             animate="visible"
             exit="exit"
