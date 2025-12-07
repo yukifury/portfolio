@@ -19,7 +19,7 @@ export const Projects: BasicProject[] = [
   {
     name: 'BlupsAdmin',
     description:
-      'Built a full-featured CMS for BlupsApp using Next.js, enabling store, product, and client management. Implemented mailing tools, an analytics dashboard with interactive charts, RBAC access control, and an order processing system with automated distribution among store employees.',
+      'Built a full-featured CMS for BlupsApp using Next.js, enabling store, product, and client management. Implemented mailing tools, an analytics dashboard with interactive charts, RBAC, and an order processing system with automated distribution among store employees.',
     smallDescription: 'Administrative CMS for BlupsApp',
     techStack: ['Next.js', 'TypeScript', 'Shadcn/ui'],
     titleImg: '/svgs/BlupsBot.svg',

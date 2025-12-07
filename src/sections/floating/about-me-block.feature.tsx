@@ -40,6 +40,12 @@ const AboutMeBlockFeature = () => {
             <span className={'text-pinky-light'}>architecture</span> and{' '}
             <span className={'text-pinky-light'}>bringing</span> design to life.
           </>,
+          <>
+            I study at the
+            <span className={'text-pinky-light'}> KROK University</span> in
+            Kyiv, majoring in{' '}
+            <span className={'text-pinky-light'}>Computer Science</span>
+          </>,
         ].map((item, index) => (
           <li className={'flex'} key={`about-me-list-item-${index}`}>
             <span className={'text-[16px] text-white opacity-50 mr-2'}>
