@@ -11,40 +11,48 @@ const AboutMeBlockFeature = () => {
       <ul className={'text-white text-xl space-y-5 font-normal'}>
         {[
           <>
-            Hi! I`m Amir —{' '}
+            Hi! I&apos;m Amir —{' '}
             <span className={'text-pinky-light'}>frontend developer</span> based
             in Ireland, originally from Ukraine.
           </>,
           <>
-            1.5 years of{' '}
-            <span className={'text-pinky-light'}>commercial experience</span> in
-            UI development.
+            ~2.5 years of{' '}
+            <span className={'text-pinky-light'}>commercial experience</span>{' '}
+            building scalable web applications with React, Next.js and
+            TypeScript.
           </>,
           <>
-            Worked on <span className={'text-pinky-light'}>e-commerce</span>,{' '}
-            <span className={'text-pinky-light'}>CMS</span>,{' '}
-            <span className={'text-pinky-light'}>landing-pages</span>,{' '}
-            <span className={'text-pinky-light'}>Telegram Webapps & Bots</span>,{' '}
-            <span className={'text-pinky-light'}>
-              third-party services integrations
-            </span>{' '}
-            and many more
+            Worked on{' '}
+            <span className={'text-pinky-light'}>SaaS admin panels</span>,{' '}
+            <span className={'text-pinky-light'}>e-commerce platforms</span>,{' '}
+            <span className={'text-pinky-light'}>CMS products</span>,{' '}
+            <span className={'text-pinky-light'}>landing pages</span> and{' '}
+            <span className={'text-pinky-light'}>API integrations</span>.
           </>,
           <>
-            Focused on <span className={'text-pinky-light'}>responsive</span>{' '}
-            layouts, <span className={'text-pinky-light'}>clean code</span> and{' '}
-            <span className={'text-pinky-light'}>usability</span>.
+            Experienced in{' '}
+            <span className={'text-pinky-light'}>UI architecture</span>,{' '}
+            <span className={'text-pinky-light'}>state management</span>,{' '}
+            <span className={'text-pinky-light'}>data-heavy interfaces</span>{' '}
+            and{' '}
+            <span className={'text-pinky-light'}>performance optimization</span>
+            .
           </>,
           <>
-            I care about <span className={'text-pinky-light'}>speed</span>,{' '}
-            <span className={'text-pinky-light'}>architecture</span> and{' '}
-            <span className={'text-pinky-light'}>bringing</span> design to life.
+            Focused on{' '}
+            <span className={'text-pinky-light'}>responsive layouts</span>,{' '}
+            <span className={'text-pinky-light'}>maintainable code</span> and{' '}
+            <span className={'text-pinky-light'}>developer productivity</span>.
           </>,
           <>
-            I study at the
-            <span className={'text-pinky-light'}> KROK University</span> in
-            Kyiv, majoring in{' '}
-            <span className={'text-pinky-light'}>Computer Science</span>
+            I focus on <span className={'text-pinky-light'}>speed</span>,{' '}
+            <span className={'text-pinky-light'}>architecture</span> and
+            bringing product ideas to life
+          </>,
+          <>
+            I study <span className={'text-pinky-light'}>Computer Science</span>{' '}
+            at <span className={'text-pinky-light'}>KROK University</span> in
+            Kyiv remotely.
           </>,
         ].map((item, index) => (
           <li className={'flex'} key={`about-me-list-item-${index}`}>

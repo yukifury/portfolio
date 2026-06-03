@@ -2,17 +2,41 @@ import FloatingBlock from '../../shared/components/floating-block/floating-block
 
 const SkillsBlockFeature = () => {
   const data = [
-    { name: 'Languages', text: 'JavaScript, TypeScript' },
-    { name: 'Frameworks', text: 'React, Next.js, Preact' },
-    { name: 'UI-kits', text: 'Shadcn/ui, Radix UI' },
-    { name: 'CSS', text: 'Tailwind, Bootstrap, PostCSS, SASS' },
-    { name: 'Testing', text: 'Vitest, Jest, React Testing Library' },
-    { name: 'Documentation', text: 'Storybook, Docusaurus' },
-    { name: 'Tools', text: 'Webstorm, Postman, Figma, Photoshop' },
-    { name: 'Core', text: 'CSS3, HTML5, GitHub' },
     {
-      name: 'Other libraries',
-      text: 'Redux, Zustand, ESLint, Prettier, Tanstack Queries/Tables etc.',
+      name: 'Frontend',
+      text: 'React, Next.js, Preact, TypeScript, JavaScript, HTML5',
+    },
+    {
+      name: 'Backend',
+      text: 'Node.js, NestJS, MongoDB, Mongoose, JWT, bcrypt, Swagger',
+    },
+    {
+      name: 'Styling & UI',
+      text: 'CSS3, SASS, PostCSS, Tailwind CSS, Bootstrap, shadcn/ui, Radix UI, TailAdmin',
+    },
+    {
+      name: 'State & Data',
+      text: 'Zustand, Redux, TanStack React Query, TanStack Table',
+    },
+    {
+      name: 'Testing',
+      text: 'Vitest, Playwright, React Testing Library',
+    },
+    {
+      name: 'DevOps',
+      text: 'Linux, Ubuntu, Docker, Docker Compose, Sentry, Nginx, Traefik',
+    },
+    {
+      name: 'Tools & Docs',
+      text: 'Storybook, Docusaurus, Git, Figma',
+    },
+    {
+      name: 'Code Quality',
+      text: 'ESLint, Prettier',
+    },
+    {
+      name: 'Animation',
+      text: 'Framer Motion',
     },
   ];
 
