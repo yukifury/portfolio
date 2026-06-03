@@ -12,8 +12,8 @@ export interface ExperienceItem {
 const ExperienceBlock = () => {
   const experience: ExperienceItem[] = [
     {
-      startYear: 2025,
-      endYear: 2026,
+      startYear: 'Jun 2025',
+      endYear: 'Mar 2026',
       company: 'Proova',
       position: 'Frontend developer',
       description: [
@@ -32,8 +32,8 @@ const ExperienceBlock = () => {
       ],
     },
     {
-      startYear: 2024,
-      endYear: 2025,
+      startYear: 'Feb 2024',
+      endYear: 'Jun 2025',
       company: 'Self Employed - Freelance',
       position: 'Frontend developer',
       description: [
@@ -109,7 +109,7 @@ const ExperienceBlock = () => {
                   'text-white 2xl:text-md lg:text-sm md:text-md text-xs'
                 }
               >
-                {item.startYear}-{item.endYear}
+                {item.startYear} - {item.endYear}
               </span>
               <div className={'flex flex-col gap-1'}>
                 <span
