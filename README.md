@@ -41,5 +41,5 @@ The application is built using modern web technologies:
 - ```npm run preview``` - launches a local preview server for the previously built production bundle
 - ```npm run lint``` - runs static code analysis using ESLint
 - ```npm run lint:fix``` - automatically fixes ESLint-detected issues
-- ```npm run prettier``` - checks code formatting using Prettier
+- ```npm run prettier:check``` - checks code formatting using Prettier
 - ```npm run prettier:fix``` - automatically formats code according to Prettier rules
