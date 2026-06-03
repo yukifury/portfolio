@@ -77,7 +77,7 @@ const Header: React.FC<HeaderProps> = ({
               'text-white absolute bottom-10 left-1/2 -translate-x-1/2 lg:text-md',
             )}
           >
-            © 2025 Mamedov Amir. Please don't steal — write your own code.
+            © 2025 Mamedov Amir. MIT License — feel free to use anything.
           </motion.span>
         )}
       </AnimatePresence>

@@ -181,12 +181,20 @@ const MobileSection = () => {
         viewport={{ once: true }}
         whileInView={'visible'}
         variants={{ ...variants }}
-        className={'w-full flex justify-center items-center md:mt-[40px] mt-5'}
+        className={
+          'w-full flex justify-center flex-col items-center md:mt-[40px] mt-0 gap-4'
+        }
       >
+        <span
+          className={cn('text-white md:text-sm text-xs text-center opacity-25')}
+        >
+          This website looks better on a larger screen :P
+        </span>
+
         <span
           className={cn('text-white md:text-sm text-xs text-center opacity-50')}
         >
-          © 2025 Mamedov Amir. Please don't steal — write your own code.
+          © 2025 Mamedov Amir. MIT License — feel free to use anything.
         </span>
       </motion.div>
     </div>
