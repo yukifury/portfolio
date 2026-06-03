@@ -32,7 +32,7 @@ const ExperienceBlock = () => {
       ],
     },
     {
-      startYear: 2023,
+      startYear: 2024,
       endYear: 2025,
       company: 'Self Employed - Freelance',
       position: 'Frontend developer',
@@ -129,7 +129,7 @@ const ExperienceBlock = () => {
               </div>
               <div
                 className={
-                  'text-white 2xl:text-md lg:text-sm md:text-md text-xs opacity-50 flex flex-col lg:gap-2 gap-3'
+                  'text-white 2xl:text-md lg:text-sm md:text-md text-xs opacity-50 flex flex-col gap-3'
                 }
               >
                 {item.description.map((item) => (

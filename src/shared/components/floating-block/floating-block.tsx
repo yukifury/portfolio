@@ -109,7 +109,7 @@ const FloatingBlock: React.FC<FloatingBlockProps> = ({
               src={backgroundImg}
               alt="Background image"
               className={
-                'user-select-none pointer-events-none absolute object-cover right-0 bottom-0 aspect-square xl:w-4/6 lg:w-4/7 md:w-3/6 w-1/3 z-0'
+                'opacity-50 user-select-none pointer-events-none absolute object-cover right-0 bottom-0 aspect-square xl:w-4/6 lg:w-4/7 md:w-3/6 w-1/3 z-0'
               }
             />
           )}
