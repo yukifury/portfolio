@@ -15,7 +15,7 @@ const App = () => {
     <>
       <motion.img
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
+        animate={{ opacity: 0.1 }}
         transition={{ duration: 3, ease: 'easeInOut' }}
         className={'absolute'}
         style={{
